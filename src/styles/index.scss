@@ -14,6 +14,10 @@ body {
     background-color: #E7F6FF;
 }
 
+main {
+    padding-top: 48px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -34,7 +38,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    
+
 
     &.xl {
         padding: 18px 64px;
@@ -134,15 +138,26 @@ a {
                 justify-content: center;
                 gap: 20px;
                 align-items: flex-start;
+
                 h2 {
                     font-weight: 700;
                     font-size: 38px;
                     line-height: 46px;
-                    color: black; 
+                    color: black;
+                }
+            }
+
+            &__right {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
                 }
             }
         }
     }
+
     .control {
         position: absolute;
         z-index: 3;
@@ -154,6 +169,7 @@ a {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
         button {
             --size: 35px;
             width: var(--size);
@@ -168,6 +184,7 @@ a {
             cursor: pointer;
             border-radius: 50%;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+
             &.prev {
                 margin-left: calc(var(--size) / -2);
             }
@@ -176,5 +193,140 @@ a {
                 margin-right: calc(var(--size) / -2);
             }
         }
+    }
+}
+
+//Section
+
+.section {
+    margin-top: 48px;
+
+    &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 18px;
+    gap: 12px;
+
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+
+    &>div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #C4C4C4;
+    }
+}
+
+//Products
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.product {
+    padding: 20px 30px 32px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 16px;
+
+    button {
+        border: none;
+        outline: none;
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        --size: 32px;
+
+        height: var(--size);
+        width: var(--size);
+        cursor: pointer;
+    }
+
+    &__action {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+
+        .gray {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            text-transform: uppercase;
+            color: #BDBDBD;
+        }
+
+        .value {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+
+    h3 {
+        margin: 14px 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #232323;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        max-height: 120px;
+        object-fit: contain;
+        display: block;
     }
 }

@@ -83,7 +83,7 @@ export const ArrowPrevIcon = ({ size = 28, color = "#C8C8C8" }) => {
   );
 };
 
-export const ArrowNextIcon = ({ size = 28, color= "#C8C8C8" }) => {
+export const ArrowNextIcon = ({ size = 28, color = "#C8C8C8" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -99,6 +99,48 @@ export const ArrowNextIcon = ({ size = 28, color= "#C8C8C8" }) => {
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M9 6l6 6l-6 6"></path>
+    </svg>
+  );
+};
+
+export const SearchIcon = ({ size = 28, color = "#E4E4E4" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-search"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke={color}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+      <path d="M21 21l-6 -6"></path>
+    </svg>
+  );
+};
+
+export const PlusIcon = ({ size = 28, color = "#D3D3D3" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon icon-tabler icon-tabler-plus"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke={color}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 5l0 14"></path>
+      <path d="M5 12l14 0"></path>
     </svg>
   );
 };
