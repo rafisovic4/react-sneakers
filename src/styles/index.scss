@@ -171,6 +171,9 @@ a {
         justify-content: space-between;
 
         button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             --size: 35px;
             width: var(--size);
             height: var(--size);
@@ -187,10 +190,12 @@ a {
 
             &.prev {
                 margin-left: calc(var(--size) / -2);
+                left: 0;
             }
 
             &.next {
                 margin-right: calc(var(--size) / -2);
+                right: 0;
             }
         }
     }
