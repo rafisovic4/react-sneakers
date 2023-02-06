@@ -258,6 +258,13 @@ a {
     grid-auto-rows: max-content;
     gap: 40px;
     margin-top: 40px;
+
+    .empty {
+        grid-column: 2 / 4;
+        text-align: center;
+        color: #bdbdbd;
+        font-weight: 200;
+    }
 }
 
 .product {
@@ -335,3 +342,30 @@ a {
         display: block;
     }
 }
+
+
+//Modal 
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 10;
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.modal {
+    display: grid;
+    grid-template-rows: 0.25fr 4.75fr 1fr;
+    background-color: white;
+    padding: 32px;
+    min-width: 25vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
